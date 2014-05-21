@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title></title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1></h1>
+
+<h2>Getting and Cleaning Data Course Project</h2>
+
+<h1></h1>
+
+<p>The data used to create the tidy dataset that is included in this same repository
+on Github is from the following:</p>
+
+<hr/>
+
+<p>Human Activity Recognition Using Smartphones Dataset
+Version 1.0</p>
+
+<p>Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+<a href="mailto:activityrecognition@smartlab.ws">activityrecognition@smartlab.ws</a>
+<a href="http://www.smartlab.ws">www.smartlab.ws</a></p>
+
+<hr/>
+
+<p>The methods and reasoning used to create the tidy dataset that is exhibited in 
+&#39;tidy.txt&#39; and produced by the &#39;run_analysis.R&#39; code are outlined below.</p>
+
+<p>The various files relevant to the data of interest is first downloaded and unzipped
+using the &#39;download.file&#39; and &#39;unzip&#39; functions. These are straightforward and do
+not require further explanation.</p>
+
+<p>Next, the data of interest are read using &#39;read.table&#39;. The files &#39;X_test.txt&#39;,
+&#39;subject_test.txt&#39;, and &#39;y_test.txt&#39; are column-bound together to represent all
+of the test data needed. The train data files are read and column-bound in the
+same fashion. Once both test and train dataframes are complete, they are row-bound
+into a single dataframe.</p>
+
+<p>The &#39;features.txt&#39; file represents the data we will need to create the appropriate
+column names for our newly created dataframe. We read in the file and use &#39;gsub&#39;
+functions to clean out inappropriate symbols such as parentheses and periods.</p>
+
+<p>We want to end up with only the variables that correspond to mean or std, so next
+we determine the numbers of those columns that we may specifically select
+them later. The &#39;grep&#39; function is very useful in recognizing patterns and returning
+the row number in which it is found (which will correspond to column number later).
+Note that the variables with &#39;meanFreq&#39; in the name are filtered out, because it
+is not a mean of a particular measurement, but just of a frequency.</p>
+
+<p>What follows next is further cleanup of variable names in order to create a uniform
+naming scheme using &#39;gsub&#39;. The variable naming scheme that we have chosen here 
+is that of Camel Case with a lower-case initial letter. This is consistent with
+accepted methods outlined in Google&#39;s R Style Guide. For reference, the guide
+may be found here: <a href="https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml">https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml</a>
+Note: Google&#39;s most preferred naming scheme of all lower-case letters with words
+separated by dots was rejected for the modified Camel Case scheme due to concerns
+of variable name length.</p>
+
+<p>The cleaned variable names, along with appropriate names for &#39;subject&#39; and &#39;activity&#39;
+are then placed into the dataframe using &#39;colnames&#39;. We then select the desired
+columns that refer to mean and std (along with subject and activity of course).</p>
+
+<p>Lastly, we read in and merge in the activity names that correspond to the
+appropriate activity numbers. This completes our dataframe to include all data
+that we will be interested in.</p>
+
+<p>After the complete dataset is created, we may run our analysis on it and output
+a tidy dataset with our desired information: the mean of each measurement for
+each subject performing each activity. We use the &#39;melt&#39; and &#39;dcast&#39; functions
+that are found in the &#39;reshape2&#39; package. This is due to the ease and efficiency
+these methods provide in order to find our desired results.</p>
+
+<p>The dataframe that is created using &#39;melt&#39; and &#39;dcast&#39; has 180 observations, which
+correspond to each of the 30 subjects undertaking each of the 6 activities. The
+mean of each measurement variable for each observation may then be found in the
+remaining 66 columns to the right of the subject and activity names.</p>
+
+<p>The tidy dataset is then written to a text file using &#39;write.table&#39; and it is
+deposited into the working directory.</p>
+
+<p>Thank you very much for your time and patience in reading all of this!</p>
+
+</body>
+
+</html>
+

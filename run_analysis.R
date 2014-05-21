@@ -36,11 +36,11 @@ stdCol<-grep(pattern="std",hyphOut)
 feat<-features[c(meanCol,stdCol),]
 noFreq<-grep(pattern="Freq",feat[,2],invert=TRUE)
 featNoFreq<-feat[noFreq,]
-featCol<-featNoFreq[,1]   ## the column numbers that correspond to mean/std
+featCol<-featNoFreq[,1]   ## the column numbers that correspond to mean/std measurements.
 
 ## Here is some more clean-up of the variable names. For consistency, we have 
 ## removed the dots and ended up with capitalized letters that start each relevant 
-## word.
+## word (after the first letter of the variable, which is lower-case).
 meanCapX<-gsub(pattern="mean",hyphOut,replacement="Mean")
 meanCapY<-gsub(pattern="mean",meanCapX,replacement="Mean")
 meanCapZ<-gsub(pattern="mean",meanCapY,replacement="Mean")
@@ -51,6 +51,7 @@ stdCapZ<-gsub(pattern="std",stdCapY,replacement="Std")
 ## Naming the columns of the merged dataset.
 colnames(xTT)<-c("subject","activity",stdCapZ)
 x<-xTT[,c(1,2,featCol+2)]
+rm(xTT)
 
 ## Lastly, we merge in the activity names that correspond to the appropriate 
 ## activity numbers.
@@ -62,7 +63,7 @@ xAll<-merge(activityLabels,x,by="activity")  ## the full dataset as a dataframe!
 ## Now that we have all the appropriate data in one dataframe, we may run some 
 ## analysis on it and output a tidy dataset with appropriate information.
 ## We will use the 'melt' and 'dcast' functions that are found in the 'reshape2' 
-## package. This is due to the ease and effiency of which using these methods are 
+## package. This is due to the ease and efficiency of which using these methods are 
 ## to find our desired result, namely, the mean of each measurement variable.
 ## If it is not already installed, the following commented-out lines will do the 
 ## trick.
