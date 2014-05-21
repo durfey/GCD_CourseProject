@@ -2,212 +2,280 @@
 ========================================================
 
 subject
-        ID number of subject.
-                integer variable
-                1-30
+*        ID number of subject.
+*                integer variable
+*                1-30
         
 activityName
-        The name of the activity.
-                character variable
-                "LAYING"
-                "SITTING"
-                "STANDING
-                "WALKING"
-                "WALKING_DOWNSTAIRS"
-                "WALKING_UPSTAIRS"
-        
+*        The name of the activity.
+*                character variable
+*                "LAYING"
+*                "SITTING"
+*                "STANDING
+*                "WALKING"
+*                "WALKING_DOWNSTAIRS"
+*                "WALKING_UPSTAIRS"    
+
 tBodyAccMeanX
-        Mean of tBodyAccMeanX
-                numeric variable
+*        Mean of tBodyAccMeanX
+*                numeric variable
+
 tBodyAccMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccMeanY
+*                numeric variable
+
 tBodyAccMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccMeanZ
+*                numeric variable
+
 tGravityAccMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccMeanX
+*                numeric variable
+
 tGravityAccMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccMeanY
+*                numeric variable
+
 tGravityAccMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccMeanZ
+*                numeric variable
+
 tBodyAccJerkMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkMeanX
+*                numeric variable
+
 tBodyAccJerkMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkMeanY
+*                numeric variable
+
 tBodyAccJerkMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkMeanZ
+*                numeric variable
+
 tBodyGyroMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroMeanX
+*                numeric variable
+
 tBodyGyroMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroMeanY
+*                numeric variable
+
 tBodyGyroMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroMeanZ
+*                numeric variable
+
 tBodyGyroJerkMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkMeanX
+*                numeric variable
+
 tBodyGyroJerkMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkMeanY
+*                numeric variable
+
 tBodyGyroJerkMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkMeanZ
+*                numeric variable
+
 tBodyAccMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccMagMean
+*                numeric variable
+
 tGravityAccMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccMagMean
+*                numeric variable
+
 tBodyAccJerkMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkMagMean
+*                numeric variable
+
 tBodyGyroMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroMagMean
+*                numeric variable
+
 tBodyGyroJerkMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkMagMean
+*                numeric variable
+
 fBodyAccMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccMeanX
+*                numeric variable
+
 fBodyAccMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccMeanY
+*                numeric variable
+
 fBodyAccMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccMeanZ
+*                numeric variable
+
 fBodyAccJerkMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkMeanX
+*                numeric variable
+
 fBodyAccJerkMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkMeanY
+*                numeric variable
+
 fBodyAccJerkMeanZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkMeanZ
+*                numeric variable
+
 fBodyGyroMeanX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyGyroMeanX
+*                numeric variable
+
 fBodyGyroMeanY
-        Mean of tBodyAccMeanY
-                numeric variable
-fBodyGyroMeanZ"
-        Mean of tBodyAccMeanY
-                numeric variablefBodyAccMagMean"
+*        Mean of fBodyGyroMeanY
+*                numeric variable
+
+fBodyGyroMeanZ
+*        Mean of fBodyGyroMeanZ
+*                numeric variable
+
+fBodyAccMagMean
+*        Mean of fBodyAccMagMean
+*                numeric variable
+
 fBodyBodyAccJerkMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyAccJerkMagMean
+*                numeric variable
+
 fBodyBodyGyroMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyGyroMagMean
+*                numeric variable
+
 fBodyBodyGyroJerkMagMean
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyGyroJerkMagMean
+*                numeric variable
+
 tBodyAccStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccMeanY
+*                numeric variable
+
 tBodyAccStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccStdY
+*                numeric variable
+
 tBodyAccStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccStdZ
+*                numeric variable
+
 tGravityAccStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccStdX
+*                numeric variable
+
 tGravityAccStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccStdY
+*                numeric variable
+
 tGravityAccStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccStdZ
+*                numeric variable
+
 tBodyAccJerkStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkStdX
+*                numeric variable
+
 tBodyAccJerkStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkStdY
+*                numeric variable
+
 tBodyAccJerkStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkStdZ
+*                numeric variable
+
 tBodyGyroStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroStdX
+*                numeric variable
+
 tBodyGyroStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroStdY
+*                numeric variable
+
 tBodyGyroStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroStdZ
+*                numeric variable
+
 tBodyGyroJerkStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkStdX
+*                numeric variable
+
 tBodyGyroJerkStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkStdY
+*                numeric variable
+
 tBodyGyroJerkStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkStdZ
+*                numeric variable
+
 tBodyAccMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccMagStd
+*                numeric variable
+
 tGravityAccMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tGravityAccMagStd
+*                numeric variable
+
 tBodyAccJerkMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyAccJerkMagStd
+*                numeric variable
+
 tBodyGyroMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroMagStd
+*                numeric variable
+
 tBodyGyroJerkMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of tBodyGyroJerkMagStd
+*                numeric variable
+
 fBodyAccStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccStdX
+*                numeric variable
+
 fBodyAccStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccStdY
+*                numeric variable
+
 fBodyAccStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccStdZ
+*                numeric variable
+
 fBodyAccJerkStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkStdX
+*                numeric variable
+
 fBodyAccJerkStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkStdY
+*                numeric variable
+
 fBodyAccJerkStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccJerkStdZ
+*                numeric variable
+
 fBodyGyroStdX
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyGyroStdX
+*                numeric variable
+
 fBodyGyroStdY
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyGyroStdY
+*                numeric variable
+
 fBodyGyroStdZ
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyGyroStdZ
+*                numeric variable
+
 fBodyAccMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyAccMagStd
+*                numeric variable
+
 fBodyBodyAccJerkMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyAccJerkMagStd
+*                numeric variable
+
 fBodyBodyGyroMagStd
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyGyroMagStd
+*                numeric variable
+
 fBodyBodyGyroJerkMagSt
-        Mean of tBodyAccMeanY
-                numeric variable
+*        Mean of fBodyBodyGyroJerkMagSt
+*                numeric variable
